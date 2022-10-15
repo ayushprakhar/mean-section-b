@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./random-roll-no.component.css']
 })
 export class RandomRollNoComponent implements OnInit {
-  randomrollno : number =0;
-  constructor() { }
+  randomrollno : number=0;
+  constructor(private http: HttpClient) { }
   
   ngOnInit(): void {
   }
