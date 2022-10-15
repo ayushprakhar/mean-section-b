@@ -13,5 +13,5 @@ export class RandomChuckNorrisJokeComponent implements OnInit {
   ngOnInit(): void {
   }
   getRandomJoke = () =>(
-    this.randomJokeObj=this.http.get("https://api.chucknorris.io/jokes/random").subscribe((data:any) =>
+  this.http.get("https://api.chucknorris.io/jokes/random").subscribe((data:any) => this.randomJokeObj = data.value)
 }
